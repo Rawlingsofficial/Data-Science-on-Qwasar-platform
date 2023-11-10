@@ -58,6 +58,6 @@ def find_most_expensive_apps : finds the most expensive apps and by their catego
 ```
 
 ### The Core Team
-Rawling Mukhen / Bolat Tungushbaev
+Rawling Mukhen
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
