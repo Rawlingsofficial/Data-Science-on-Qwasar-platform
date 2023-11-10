@@ -1,5 +1,5 @@
 # Welcome to My Mobapp Studio
-Description  hhhhhfff
+Description 
 Welcome!
 We are very pleased to hired as Junior Data Scientist here at My MobApp Studio. As I told you during your very first interview, data science is very new for us but you succeeded to convinced that it's one of the key factor to be successful in our digital world, as you said: data is life.
 Last management meeting, we decided we will allocate resource to create a new mobile app and I have to say that I have already received multiple emails showing the enthusiasm from our employees who wants to be part of the team.
