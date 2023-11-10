@@ -5,6 +5,9 @@ The goal of this project is to build a modern and accurate
  leveraging customer preferences and historical data to provide personalized wine recommendations.
 
 LINK TO BLOG POST :: https://medium.com/@rawlingsofficial300/my-vivivno-9b85d08052ce
+
+
+
 LINK TO PRESENTATION :: https://www.canva.com/design/DAFsOBpadDk/je5Jb0B893FSJSaxWg8OJQ/edit?utm_content=DAFsOBpadDk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
@@ -52,6 +55,6 @@ def fit_model_prediction : make prediction base on data to determine prices
 ```
 
 ### The Core Team
-rawling mukhen(rawling_m) $ Bolat Tungushbaev(tungushb_b)
+rawling mukhen(rawling_m)
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
