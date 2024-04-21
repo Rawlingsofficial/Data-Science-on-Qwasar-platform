@@ -24,4 +24,5 @@ This project is the culmination of my journey through the Data Science Bootcamp.
 - **Machine Learning Framework:** scikit- learn
 - **Data Analysis:** Jupyter Notebooks
 
+![image](https://github.com/Rawlingsofficial/Data-Science-on-Qwasar-platform/assets/118646636/55c9e557-5c1e-4f79-891c-3a4b8667ac7e)
 
