@@ -1,33 +1,10 @@
-# Welcome to My Nba Game Analysis
-We have caught all the play_by_play happening during a NBA game so we have a flow of data and we want to create a nice array of hash which will sum everything.
-Part I
-Create a function analyse_nba_game(play_by_play_moves) which receives an array of play and will return a dictionary summary of the game.
-Each play follow this format:
-PERIOD|REMAINING_SEC|RELEVANT_TEAM|AWAY_TEAM|HOME_TEAM|AWAY_SCORE|HOME_SCORE|DESCRIPTION
-They are ordered by time.
-The return dictionary (hash) will have this format:
-{"home_team": {"name": TEAM_NAME, "players_data": DATA}, "away_team": {"name": TEAM_NAME, "players_data": DATA}}
-DATA will be an array of hashes with this format:
-{"player_name": XXX, "FG": XXX, "FGA": XXX, "FG%": XXX, "3P": XXX, "3PA": XXX, "3P%": XXX, "FT": XXX, "FTA": XXX, "FT%": XXX, "ORB": XXX, "DRB": XXX, "TRB": XXX, "AST": XXX, "STL": XXX, "BLK": XXX, "TOV": XXX, "PF": XXX, "PTS": XXX}
-Part II
-Create a print_nba_game_stats(team_dict) function which will a dictionary with name and players_data will print it with the following format (each column is separated by a tabulation (' ')):
-HEADER
-FOR PLAYER IN PLAYERS
-PLAYER
-TOTAL
-Example 00
-Players	FG	FGA	FG%	3P	3PA	3P%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PTS
-Player00	XX	XX	.XXX	X	XX	.XXX	XX	XX	.XXX	XX	XX	XX	XX	X	X	XX	XX	XX
-Totals	XX	XX	.XXX	X	XX	.XXX	XX	XX	.XXX	XX	XX	XX	XX	X	X	XX	XX	XX
-## Task
-What is the problem? And where is the challenge?
-NBA (National Basketball Association) game data. It performs various tasks related to extracting and
-processing information from an input CSV file containing play-by-play data for an NBA game.
-the chalenge of this project involve 
-(data loading, player name extraction, calculating the player statistics, team assingment and team statistic calculation )
+# Welcome to  NBA Game Analysis poject
+Welcome to the NBA Game Analysis project! This project aims to analyze NBA game data to extract player statistics, team performances, and predict game outcomes. In this README, you'll find an overview of the project, how to use it, and the key components involved.
 
-## Description
-How have you solved the problem?
+# Overview
+The NBA Game Analysis project provides a set of Python scripts to analyze NBA game data, extract player statistics, and predict game outcomes. It includes functions to load game data, preprocess it, analyze player performances, visualize statistics, and predict game results.
+
+# How I solve the problem?
 -load_nba_game_data(nbafile)
 this function is used for loding the nba data from the text file (nba_game_warriors_thunder_20181016.txt).
 It takes the file path (nbafile) as an argument and reads the file line by line using the csv module. 
@@ -45,19 +22,89 @@ by plays_by_plays_movez (play descriptions), lst_player_teams (list of player na
 (player statistics) as inputs. It identifies the names of the two teams playing the game and maps
 players to their corresponding teams based on play descriptions. The function then aggregates player statistics for each team, calculating total points, rebounds, assists, and other metrics. The results are stored in dictionaries (team_one_stats and team_two_stats) and printed.
 
-## Installation
-How to install your project? npm install? make? make re?
-apart from downloading the txt file and importing several useful liberies no instalations were made
-## Usage
-How does it work?
-``` 
-have the actual NBA game data file ("nba_game_warriors_thunder_20181016.txt") available, 
-as the code relies on the specific content and format of this file for parsing and analysis.
-copy and past in  your code editior of choice make sure to have python installed on your pc. 
-runing the code will print the statistics in the terminal.
+# Install the required dependencies:
+```python
+pip install pandas
 ```
+# Run the main script to perform NBA game analysis:
+```python
+python main.py
+```
+
+# Installation
+To use this project, follow these steps:
+
+1. Clone the repository to your local machine:
+   
+```python
+   git clone https://github.com/your-username/nba-game-analysis.git
+```
+
+
+apart from downloading the txt file and importing several useful liberies no instalations were made
+# Usage
+How does it work?
+The project consists of several key components:
+## 1. Loading NBA Game Data
+   The 'load_nba_game_data' function is used to load NBA game data from a text file
+``` 
+# Load NBA game data
+play_by_play_moves = load_nba_game_data("nba_game_warriors_thunder_20181016.txt")
+
+```
+## 2. Analyzing NBA Game Data
+  The new_analyze_game_nba function extracts player names from the game data.
+  ```
+  # Analyze NBA game and extract player names
+  player_names = new_analyze_game_nba(play_by_play_moves)
+  ```
+The call_players_statz function calculates player statistics based on the game data and player names.
+```
+# Calculate player statistics
+player_statistics = call_players_statz(play_by_play_moves, player_names)
+```
+## 3. Mapping Players to Teams
+The assign_player_to_teams function maps players to their respective teams and aggregates team statistics.
+```
+# Map players to their respective teams
+team_mappings = assign_player_to_teams(play_by_play_moves, player_names, player_statistics)
+```
+## 4. Preprocessing Data
+ preprocess NBA game data using the preprocess_nba_game_data function.
+ ```
+# Preprocess NBA game data
+preprocessed_data = preprocess_nba_game_data(game_data)
+```
+## 5. Visualization
+  Visualize NBA game statistics using the 'visualize_nba_stats' function.
+```
+# Visualize NBA game statistics
+visualize_nba_stats(player_statistics)
+```
+## 6. Prediction
+  Predict NBA game outcomes using the 'predict_game_outcome' function.
+  ```
+# Predict NBA game outcomes
+predicted_outcomes = predict_game_outcome(preprocessed_data)
+  ```
+## 7. Saving and Exporting Results
+  Save and export analysis results using the following functions:
+  ```
+  # Save analysis results
+save_analysis_results(results, "analysis_results.txt")
+
+# Export analysis to CSV
+export_to_csv(results, "analysis_results.csv")
+  ```
+##  Conclusion
+The NBA Game Analysis project provides a comprehensive toolkit for analyzing NBA game data, extracting player statistics, and predicting game outcomes. Whether you're a sports enthusiast, data analyst, or machine learning practitioner, this project offers valuable insights into NBA game dynamics. Start exploring and analyzing NBA game data today!
+ 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+  
 ### The Core Team
-RAWLING MUKHEN
+[Mbah Rawling Mukhen](https://github.com/Rawlingsofficial)
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px'></span>
